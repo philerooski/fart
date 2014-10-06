@@ -59,11 +59,22 @@ function init() {
   resetEquation(equation);
   drawx100();
   drawEquation();
+  makeVariableContainersPretty();
   drawInterval = setInterval(draw, 15);
 }
 
+function makeVariableContainersPretty() {
+    var leftHeight = $("#var-wrap-left").height();
+    var rightHeight = $("#var-wrap-right").height();
+    if (leftHeight > rightHeight) {
+        // haxor4lyfe
+        $("#var-wrap-right").css("height", leftHeight - 22 + "px");
+    } else {
+        $("#var-wrap-left").css("height", rightHeight + 22 + "px");
+    }
+}
+
 function draw() {
-  //ctx.clearRect(0,0,WIDTH,HEIGHT);
   ctx.save();
   ctx.translate(WIDTH/2, HEIGHT/2);
   ctx.fillStyle = randomColor() + '1)';
