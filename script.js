@@ -22,6 +22,7 @@ var d;
 var f;
 var g;
 var a;
+var size;
 
 (function() {
     var WIDTH;
@@ -39,7 +40,6 @@ var a;
     var liveVariable;
     var widthStretch;
     var heightStretch;
-    var size;
     var drawInstantlySwitch;
 
     $(document).ready(function() {
